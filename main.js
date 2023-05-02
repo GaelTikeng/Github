@@ -53,21 +53,22 @@ function getUserName(e) {
     .then((response) => response.json())
     .then((data) => {
       document.querySelector(".my_profile").innerHTML = `
-      <div>
-      <a href="https://github.com/${data.login}" target="_blank">
-        <img 
-          src="${data.avatar_url}" alt="profile picture"
-        />
-      </a>
-    </div>
-    <div class="information">
-      <h2><a href="https://github.com/${data.login}" target="_blank"> ${data.login}</a></h2>
-      <p>Reposatories: ${data.public_repos}</p>
-    </div>
+      <div class="information-box">
+        <div>
+          <a href="https://github.com/${data.login}" target="_blank">
+            <img src="${data.avatar_url}" alt="profile picture"/>
+          </a>
+        </div>
+        <div class="information">
+          <h2><a href="https://github.com/${data.login}" target="_blank"> ${data.login}</a></h2>
+          <p><a href="https://github.com/${data.login}?tab=repositories" target="_blank"> Reposatories: ${data.public_repos}</a></p>
+        </div>
+      </div>
       `
       console.log(data)
     })
     .catch((err) => {
+      // document.querySelector('#display').innerHTML = `Profile not found. error: ${err}`
       console.log("Profile not found", err)
     })
     e.preventDefault()

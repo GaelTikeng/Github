@@ -7,6 +7,10 @@
   font-family: 'Libre Baskerville', serif;
 }
 
+body {
+  /* background: #010811; */
+}
+
 .images {
   width: 100px;
   display: flex;
@@ -17,13 +21,18 @@
 .maincontainer {
   width: 80%;
   margin: 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 20px 0;
 }
 
 h1 {
   text-align: center;
   padding: 10px 0;
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
 }
 
 .input_text {
@@ -34,7 +43,17 @@ h1 {
 
 .summit {
   padding: 10px;
-  cursor: pointer;  
+  cursor: pointer; 
+}
+
+.display {
+  padding: 10px 0;
+}
+
+hr {
+  width: 67%;
+  margin-left: 135px;
+  /* margin: 0 auto; */
 }
 
 .my_profile {
@@ -43,7 +62,13 @@ h1 {
   width: 80%;
   margin: 0 auto;
   padding-top: 30px;
+  /* color: #fff; */
+  width: 80%;
 }
+
+/* .inside_js {
+  border: 1px solid black;
+} */
 
 img {
   width: 150px;
@@ -52,14 +77,24 @@ img {
 
 .information {
   padding-top: 50px;
+  /* color: #fff; */
+  gap: 2rem;
 }
 
-a {
+.information a {
   text-decoration: none;
-  color: black;
-  padding: 50px 0;
+  color: #fff;
+  /* padding: 50px 0; */
 }
 
 a:hover {
-  color: #182ef3;
+  color: #4c5cee;
+}
+
+.information-box {
+  width: 83%;
+  padding: 10px;
+  display: flex;
+  gap: 1.5rem;
+  box-shadow: 0 3px 15px 0 #000;
 }
