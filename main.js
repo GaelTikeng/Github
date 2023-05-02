@@ -1,57 +1,20 @@
 const userName = document.querySelector('.input_text').value
 const displayProfile = document.querySelector('.display')
 
-// async function getUserName() {
-//   const response = await fetch('https://docs.github.com/en/rest?apiVersion=2022-11-28')
-
-//   try {
-//     if (!response.ok) {
-//       throw new Error(`Failed to fetch posts: ${response.status}`)
-//     }
-  
-//     return response.json()
-//   } catch (e) {
-//     console.log(e)
-//   }
-// }
-
-// function listPosts(postContainerElementId) {
-//   const postContainerElement = document.getElementById('postContainerElement')
-
-//   if (!postContainerElement) {
-//     return
-//   }
-
-//   getUserName()
-//     .then(posts => {})
-//     .catch((e) => {
-//       console.log(e)
-//     })
-// }
-
-// // function postElement (post) {
-// //   const anchorElement = document.createElement('a')
-
-// // }
-
-// const response = await fetch(`https://api.github.com/users/${useName}`)
-
-// async function getUserName() {
-//   const response = await fetch('https://api.github.com/users/mojombo')
-//   const data = await response.json()
-//   console.log(data)
-//   // console.log(response.status)
-// }
-// getUserName()
-
+// adding an eventlistener to the submition button
 document.querySelector('.summit').addEventListener('click', getUserName)
 
+// get user name function 
 function getUserName(e) {
   let useName = document.querySelector('.input_text').value
   let url = `https://api.github.com/users/${useName}`
+
+  // fetching data from the API
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+
+      // dispay fetched datas in the DOM
       document.querySelector(".my_profile").innerHTML = `
       <div class="information-box">
         <div>
@@ -65,7 +28,6 @@ function getUserName(e) {
         </div>
       </div>
       `
-      console.log(data)
     })
     .catch((err) => {
       // document.querySelector('#display').innerHTML = `Profile not found. error: ${err}`
@@ -74,13 +36,6 @@ function getUserName(e) {
     e.preventDefault()
 }
 
-// function lowerCase(str) {
-//   return str.toLowerCase()
-// }
-
-// function capitaliseFirstletter (string) {
-//   return string.charAt(0).toUpperCase() + string.slice(1)
-// }
 
 
 
