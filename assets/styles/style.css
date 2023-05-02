@@ -8,14 +8,14 @@
 }
 
 body {
-  /* background: #010811; */
+  background: #282c34;
 }
 
 .images {
   width: 100px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .maincontainer {
@@ -97,4 +97,29 @@ a:hover {
   display: flex;
   gap: 1.5rem;
   box-shadow: 0 3px 15px 0 #000;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .maincontainer {
+    width: 90%;
+  }
+
+  hr {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .my_profile {
+    width: 100%;
+  }
+
+  .information-box {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
