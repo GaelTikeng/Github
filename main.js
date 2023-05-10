@@ -11,7 +11,6 @@ function getUserName (e) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-
       // dispay fetched data in the DOM
       document.querySelector('.myprofile').innerHTML = `
       <div class="information-box">
