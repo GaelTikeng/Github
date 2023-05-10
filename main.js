@@ -2,8 +2,8 @@
 // adding an eventlistener to the submition button
 document.querySelector('.summit').addEventListener('click', getUserName)
 
-// get user name function 
-function getUserName(e) {
+// get user name function
+function getUserName (e) {
   const useName = document.querySelector('.inputtext').value
   const url = `https://api.github.com/users/${useName}`
 
@@ -13,7 +13,7 @@ function getUserName(e) {
     .then((data) => {
 
       // dispay fetched data in the DOM
-      document.querySelector(".myprofile").innerHTML = `
+      document.querySelector('.myprofile').innerHTML = `
       <div class="information-box">
         <div>
           <a href="https://github.com/${data.login}" target="_blank">
@@ -31,7 +31,7 @@ function getUserName(e) {
     })
     .catch((err) => {
       // document.querySelector('#display').innerHTML = `Profile not found. error: ${err}`
-      console.log("Profile not found", err)
+      console.log('Profile not found', err)
     })
   e.preventDefault()
 }
