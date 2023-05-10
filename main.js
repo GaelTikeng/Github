@@ -1,13 +1,11 @@
-const userName = document.querySelector('.input_text').value
-const displayProfile = document.querySelector('.display')
 
 // adding an eventlistener to the submition button
 document.querySelector('.summit').addEventListener('click', getUserName)
 
 // get user name function 
 function getUserName(e) {
-  let useName = document.querySelector('.input_text').value
-  let url = `https://api.github.com/users/${useName}`
+  const useName = document.querySelector('.inputtext').value
+  const url = `https://api.github.com/users/${useName}`
 
   // fetching data from the API
   fetch(url)
@@ -15,11 +13,11 @@ function getUserName(e) {
     .then((data) => {
 
       // dispay fetched data in the DOM
-      document.querySelector(".my_profile").innerHTML = `
+      document.querySelector(".myprofile").innerHTML = `
       <div class="information-box">
         <div>
           <a href="https://github.com/${data.login}" target="_blank">
-            <img src="${data.avatar_url}" alt="profile picture"/>
+            <img src='${data.avatar_url}' alt="profile picture"/>
           </a>
         </div>
         <div class="information">
@@ -35,33 +33,5 @@ function getUserName(e) {
       // document.querySelector('#display').innerHTML = `Profile not found. error: ${err}`
       console.log("Profile not found", err)
     })
-    e.preventDefault()
+  e.preventDefault()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

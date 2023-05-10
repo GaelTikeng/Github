@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 body {
@@ -41,7 +41,7 @@ h2 {
   margin: 0 auto;
 }
 
-.input_text {
+.inputtext {
   width: 94%;
   padding: 10px 0;
   margin: 0 auto;
@@ -50,7 +50,7 @@ h2 {
 .summit {
   padding: 10px 0;
   width: 5%;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .display {
@@ -62,16 +62,15 @@ hr {
   margin: 0 auto;
 }
 
-.my_profile {
+.myprofile {
   display: flex;
   gap: 1.5rem;
   width: 80%;
   margin: 0 auto;
   padding-top: 30px;
-  width: 80%;
 }
 
-.my_profile:hover {
+.myprofile:hover {
   transform: translateY(3px);
   cursor: pointer;
 }
@@ -133,7 +132,7 @@ a:hover {
     margin: 0 auto;
   }
 
-  .my_profile {
+  .myprofile {
     width: 100%;
   }
 
