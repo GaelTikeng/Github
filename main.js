@@ -17,7 +17,7 @@ function getUserName (e) {
       <div class="information-box">
         <div>
           <a href="https://github.com/${data.login}" target="_blank">
-            <img src='${data.avatar_url}' alt="profile picture"/>
+            <img src="${data.avatar_url}" alt="profile picture"/>
           </a>
         </div>
         <div class="information">
