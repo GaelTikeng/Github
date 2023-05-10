@@ -14,7 +14,7 @@ function getUserName(e) {
     .then((response) => response.json())
     .then((data) => {
 
-      // dispay fetched datas in the DOM
+      // dispay fetched data in the DOM
       document.querySelector(".my_profile").innerHTML = `
       <div class="information-box">
         <div>
@@ -25,6 +25,8 @@ function getUserName(e) {
         <div class="information">
           <h2><a href="https://github.com/${data.login}" target="_blank"> ${data.login}</a></h2>
           <p><a href="https://github.com/${data.login}?tab=repositories" target="_blank"> Reposatories: ${data.public_repos}</a></p>
+          <p><a href="https://github.com/${data.login}?tab=repositories" target="_blank"> Followers: ${data.followers}</a></p>
+          <p><a href="https://github.com/${data.login}?tab=repositories" target="_blank"> Following: ${data.following}</a></p>
         </div>
       </div>
       `
