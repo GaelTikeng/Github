@@ -62,7 +62,8 @@ hr {
   margin: 0 auto;
 }
 
-.myprofile {
+.myprofile,
+.undefined {
   display: flex;
   gap: 1.5rem;
   width: 80%;
@@ -73,6 +74,17 @@ hr {
 .myprofile:hover {
   transform: translateY(3px);
   cursor: pointer;
+}
+
+.not-found {
+  width: 250px;
+  border-radius: 3px;
+  align-self: center;
+}
+
+.p-tag {
+  color: #fff;
+  text-align: center;
 }
 
 img {
@@ -99,6 +111,17 @@ a:hover {
   width: 83%;
   padding: 10px;
   display: flex;
+  gap: 1.5rem;
+  margin: 0 auto;
+  box-shadow: 0 3px 15px 0 #000;
+}
+
+.page-not-found {
+  width: 35%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 1.5rem;
   margin: 0 auto;
   box-shadow: 0 3px 15px 0 #000;
