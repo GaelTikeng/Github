@@ -11,8 +11,8 @@ function getUserName (e) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      if (useName === "") {
-        alert("please enter a username")
+      if (useName === '') {
+        alert('please enter a username')
       } else if (data.login === undefined) {
         document.querySelector('.undefined').innerHTML = `
         <div class="page-not-found" >
@@ -34,10 +34,8 @@ function getUserName (e) {
             <p><a href="https://github.com/${data.login}?tab=repositories" target="_blank"> Followers: ${data.followers}</a></p>
             <p><a href="https://github.com/${data.login}?tab=repositories" target="_blank"> Following: ${data.following}</a></p>
           </div>
-        </div>
-        `
+        </div>`
       }
-      
     })
     .catch((err) => {
       // document.querySelector('#display').innerHTML = `Profile not found. error: ${err}`
